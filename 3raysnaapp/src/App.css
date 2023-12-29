@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+body
+{
+  background-color: rgb(124, 185, 175);
+}
+/* ______________________________________________ EnterPageComponent _________________________________________ */
+.EnterPageComponent
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.EnterPageComponent h1
+{
+  color: white;
+  font-family: 'Lemonada', sans-serif;
+}
+/*-------------- OpenCloseDivInEnterPageComponent -----------------*/
+.OpenCloseDivInEnterPageComponent
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+.OpenCloseDivInEnterPageComponent h2
+{
+  border: 5px solid rgb(73, 49, 42);
+  width: 130px;
+  height: 40px;
+  border-radius: 50px; 
+  color: white;
+}
+/* ---------------------- ParagraphEnterPageComponent ----------------------- */
+.ParagraphEnterPageComponent p
+{
+  font-size: 18px;
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
+}
+/* ________________________________________FooterComponent________________________________________ */
+.FooterComponent
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+}
+.FooterComponent img
+{
+  width: 10%;
+  padding-bottom: 1%;
+}
+
+
