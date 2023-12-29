@@ -29,13 +29,15 @@ export default function EnterPage() {
                 حَفلات خاصة، بوفيهات، عَقائق، جبلات حِناء<br />
 متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30</p>
         </div>
-
-
-        <img className='ArrowEnterPageComponent'  src={arrow} alt="arrow" />
-        <img className='ArrowSecondEnterPageComponent'  src={arrow} alt="arrow" />
-
+        <div className='StartGetDivEnterPageComponent'>
         <h2 id='Start' >ابدا طلبيتك من هون</h2>
         <h2 id='Get'>اوصل لعندنا من هون</h2>
+        </div>
+        <div className='ArrowDivEnterPageComponent'>
+        <img className='ArrowEnterPageComponent'  src={arrow} alt="arrow" />
+        <img className='ArrowSecondEnterPageComponent'  src={arrow} alt="arrow" />
+        </div>
+  
         <div>
             {OpenCloseFunc()}
         </div>

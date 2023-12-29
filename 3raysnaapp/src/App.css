@@ -34,20 +34,26 @@ header h1
   font-size: 15px;
 
 }
+/* ____________________________StartGetDivEnterPageComponent________________________________ */
+.StartGetDivEnterPageComponent
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10%;
+}
 #Start
 {
  color: #7d3b00;
- position: absolute;
- top: 62%;
- left: 5%;
+ position: relative;
  transform: rotate(340deg);
 }
 #Get
 {
  color: #00677c;
- position: absolute;
- top: 62%;
- right: 5%;
+ position: relative;
  transform: rotate(20deg);
 }
 /*-------------- OpenCloseDivInEnterPageComponent -----------------*/
@@ -78,24 +84,26 @@ header h1
   font-size: 18px;
   font-family: 'Kufam', sans-serif;
   font-weight: 700;
+  padding-bottom: 20%;
 }
 /* -----------------------------ArrowDivEnterPageComponent-------------------------- */
-
+.ArrowDivEnterPageComponent
+{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10%;
+}
 .ArrowEnterPageComponent
 {
   width: 40%;
-  position: absolute;
-  bottom: 12%;
+  position: relative;
   transform:scaleX(-1) rotate(70deg);
-  left: 10%;
 }
 .ArrowSecondEnterPageComponent
 {
   width: 40%;
-  position: absolute;
-  bottom: 12%;
+  position: relative;
   transform: rotate(70deg);
-  right: 10%;
 }
 
 /* ________________________________________FooterComponent________________________________________ */
@@ -106,7 +114,7 @@ header h1
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  position: fixed;
+  position: static;
   left: 0px;
   bottom: 0px;
 }
