@@ -22,7 +22,7 @@ export default function OpenClose() {
           const formattedTime = parseInt(time.replace(':', ''), 10);
       
           // Check if the time is between 18:30 (1830) and 22:00 (2200)
-          if (formattedTime >= 1830 && formattedTime <= 2450) {
+          if (formattedTime >= 1830 && formattedTime <= 2200) {
             setOpenClose(true) // The restaurant is open
             setOpen('flex')
             setClose('none')
