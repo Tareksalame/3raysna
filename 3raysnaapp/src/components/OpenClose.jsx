@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 
 import userContext from '../userContext';
 import { useContext, useEffect } from 'react';
+import openimg from '../images/open.png'
+import closeimg from '../images/close.svg'
 
 export default function OpenClose() {
 
-    const{openClose,close,open,setClose,setOpen ,setOpenClose} = useContext(userContext)
+    const{openClose,open,close,setClose,setOpen ,setOpenClose} = useContext(userContext)
 
 
 
@@ -20,18 +22,18 @@ export default function OpenClose() {
           const formattedTime = parseInt(time.replace(':', ''), 10);
       
           // Check if the time is between 18:30 (1830) and 22:00 (2200)
-          if (formattedTime >= 1830 && formattedTime <= 2200) {
+          if (formattedTime >= 1830 && formattedTime <= 2400) {
             setOpenClose(true) // The restaurant is open
-            setOpen('green')
-            setClose('red')
+            setOpen('flex')
+            setClose('none')
           }
         }
         else
         {
             // The restaurant is not open at the specified day and time
             setOpenClose(false)
-            setOpen('red')
-            setClose('green')
+            setOpen('none')
+            setClose('flex')
         }
       
         
@@ -45,8 +47,8 @@ export default function OpenClose() {
 
   return (
     <div className='OpenCloseDivInEnterPageComponent'>
-    <h2 style={{backgroundColor:open}}>OPEN</h2>
-    <h2 style={{backgroundColor:close}}>CLOSE</h2>
+        <img style={{display:open,width:'40%',paddingTop:'5%',paddingBottom:'10%'}} src={openimg} alt="open" />
+        <img style={{display:close}} src={closeimg} alt="close" />
     </div>
   )
 }

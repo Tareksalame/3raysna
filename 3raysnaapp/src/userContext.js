@@ -6,8 +6,8 @@ export const UsersProvider = ({children})=>
 {
   const [location, setLocation] = useState(null);
   const [openClose ,setOpenClose] = useState(false);
-  const[open,setOpen] = useState('red')
-  const[close,setClose] = useState('green')
+  const[open,setOpen] = useState('none')
+  const[close,setClose] = useState('flex')
 
 
 

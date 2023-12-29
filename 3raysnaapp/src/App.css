@@ -1,9 +1,23 @@
 .App {
   text-align: center;
+  background-color: rgb(124, 185, 175);
 }
 body
 {
   background-color: rgb(124, 185, 175);
+}
+/* __________________________HEADER_____________________________________ */
+header
+{
+  background-color: rgb(221, 195, 87);
+  width: 100%;
+  
+}
+header h1
+{
+  font-family: 'Lemonada', sans-serif;
+  color: #7d3b00;
+
 }
 /* ______________________________________________ EnterPageComponent _________________________________________ */
 .EnterPageComponent
@@ -13,18 +27,40 @@ body
   justify-content: center;
   align-items: center;
 }
-.EnterPageComponent h1
+
+.EnterPageComponent h2
 {
-  color: white;
-  font-family: 'Lemonada', sans-serif;
+  font-family: 'Kufam', sans-serif;
+  font-size: 15px;
+
+}
+#Start
+{
+ color: #7d3b00;
+ position: absolute;
+ top: 62%;
+ left: 5%;
+ transform: rotate(340deg);
+}
+#Get
+{
+ color: #00677c;
+ position: absolute;
+ top: 62%;
+ right: 5%;
+ transform: rotate(20deg);
 }
 /*-------------- OpenCloseDivInEnterPageComponent -----------------*/
 .OpenCloseDivInEnterPageComponent
 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: 90%;
+}
+.OpenCloseDivInEnterPageComponent img
+{
   width: 70%;
 }
 .OpenCloseDivInEnterPageComponent h2
@@ -32,6 +68,7 @@ body
   border: 5px solid rgb(73, 49, 42);
   width: 130px;
   height: 40px;
+  padding-top: 3%;
   border-radius: 50px; 
   color: white;
 }
@@ -42,6 +79,25 @@ body
   font-family: 'Kufam', sans-serif;
   font-weight: 700;
 }
+/* -----------------------------ArrowDivEnterPageComponent-------------------------- */
+
+.ArrowEnterPageComponent
+{
+  width: 40%;
+  position: absolute;
+  bottom: 12%;
+  transform:scaleX(-1) rotate(70deg);
+  left: 10%;
+}
+.ArrowSecondEnterPageComponent
+{
+  width: 40%;
+  position: absolute;
+  bottom: 12%;
+  transform: rotate(70deg);
+  right: 10%;
+}
+
 /* ________________________________________FooterComponent________________________________________ */
 .FooterComponent
 {
@@ -49,15 +105,15 @@ body
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  bottom: 0px;
-  left: 0px;
-  position: fixed;
   width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
 }
 .FooterComponent img
 {
-  width: 10%;
-  padding-bottom: 1%;
+  width: 40%;
+  padding-bottom: 3%;
 }
 
 
