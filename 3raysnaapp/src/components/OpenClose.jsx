@@ -7,7 +7,7 @@ import closeimg from '../images/close.svg'
 
 export default function OpenClose() {
 
-    const{openClose,open,close,setClose,setOpen ,setOpenClose} = useContext(userContext)
+    const{open,close,setClose,setOpen ,setOpenClose} = useContext(userContext)
 
 
 
@@ -17,12 +17,12 @@ export default function OpenClose() {
 
     function isRestaurantOpen(day, time) {
         // Check if the day is Thursday or Friday
-        if (day === 'Thursday' || day === 'Friday') {
+        if (day === 'Thursday' || day === 'Friday' || day === 'Saturday') {
           // Convert the time to a comparable format (e.g., '18:30' becomes 1830)
           const formattedTime = parseInt(time.replace(':', ''), 10);
       
           // Check if the time is between 18:30 (1830) and 22:00 (2200)
-          if (formattedTime >= 1830 && formattedTime <= 2400) {
+          if (formattedTime >= 1830 && formattedTime <= 2450) {
             setOpenClose(true) // The restaurant is open
             setOpen('flex')
             setClose('none')

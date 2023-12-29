@@ -19,6 +19,16 @@ header h1
   color: #7d3b00;
 
 }
+/* Define keyframes for the animation */
+@keyframes upDownAnimation {
+  0%, 100% {
+    transform: translateY(0); /* Initial and final position */
+  }
+  50% {
+    transform: translateY(-20px); /* Midpoint position, adjust the value as needed */
+  }
+}
+
 /* ______________________________________________ EnterPageComponent _________________________________________ */
 .EnterPageComponent
 {
@@ -42,7 +52,13 @@ header h1
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding-bottom: 10%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+
+}
+.StartGetDivEnterPageComponent h2
+{
+  font-size: 20px;
 }
 #Start
 {
@@ -84,26 +100,38 @@ header h1
   font-size: 18px;
   font-family: 'Kufam', sans-serif;
   font-weight: 700;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-bottom: 30%;
+  margin: 0px;
 }
 /* -----------------------------ArrowDivEnterPageComponent-------------------------- */
 .ArrowDivEnterPageComponent
 {
-  width: 100%;
+  width: 80%;
   text-align: center;
-  padding-bottom: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5%;
+  animation: upDownAnimation 3s infinite; /* 1s duration, infinite loop */
+
 }
 .ArrowEnterPageComponent
 {
   width: 40%;
   position: relative;
-  transform:scaleX(-1) rotate(70deg);
+  transform:scaleX(-1) rotate(359deg);
+  
+  
 }
 .ArrowSecondEnterPageComponent
 {
   width: 40%;
   position: relative;
-  transform: rotate(70deg);
+  transform: rotate(357deg);
+  animation: upDownAnimation 5s infinite; /* 1s duration, infinite loop */
+
 }
 
 /* ________________________________________FooterComponent________________________________________ */
@@ -114,7 +142,7 @@ header h1
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  position: static;
+  position: relative;
   left: 0px;
   bottom: 0px;
 }
