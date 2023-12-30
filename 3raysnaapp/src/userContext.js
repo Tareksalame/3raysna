@@ -32,11 +32,11 @@ export const UsersProvider = ({children})=>
         {meal : "كوكا كولا" , price: 3 , img:cola },
     ]
     const additionsMenu = [
-        ' 🥒خيار مخلل ',
-        '🧅بصل مع بقدونس',
-        '🍅بندورة',
-        '🍈ملفوف',
-        '🌶️فليفلة'
+        {add : '🥒خيار مخلل '    ,YesNo: false},
+        {add : '🧅بصل مع بقدونس' ,YesNo: false},
+        {add : '🍅بندورة'        ,YesNo: false},
+        {add : '🍈ملفوف'         ,YesNo: false},
+        {add : '🌶️فليفلة'        ,YesNo: false}
     ]
 
   const [location, setLocation] = useState(null);

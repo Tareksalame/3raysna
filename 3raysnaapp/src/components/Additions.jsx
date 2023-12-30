@@ -7,14 +7,25 @@ import x from '../images/menu/x.png'
 export default function Additions(props) {
   const[counter,setCounter] = useState(x)
 
+  const Yes = ()=>
+  {
+    props.val.YesNo = true
+    setCounter(check)
+  }
+  const No = ()=>
+  {
+    props.val.YesNo = false
+    setCounter(x)
+  }
+
   return (
     <div className='AdditionsComponent'>
         <div className='additionName'>
-        <h1>{props.val}</h1>
+        <h1>{props.val.add}</h1>
         </div>
         <div className='AdditionCountersDiv'>
-            <button onClick={()=>{setCounter(check)}}>+</button>
-            <button onClick={()=>{setCounter(x)}}>-</button>
+            <button onClick={Yes}>+</button>
+            <button onClick={No}>-</button>
             <img  src={counter} alt="YESNO" />
         </div>
     </div>

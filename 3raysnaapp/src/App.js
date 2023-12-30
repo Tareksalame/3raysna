@@ -7,6 +7,7 @@ import Menu from './components/Menu';
 import TakeAwayOrIn from './components/TakeAwayOrIn';
 import Meal from './components/Meal';
 import Drink from './components/Drink';
+import InformationsPage from './components/InformationsPage';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/' element={<EnterPage/>}/>
           <Route path='/Choose' element={<TakeAwayOrIn/>}/>
           <Route path='/Menu' element={<Menu/>}/>
+          <Route path='/Informations' element={<InformationsPage/>}/>
           <Route path='/Meal' element={<Meal/>}/>
           <Route path='/Drink' element={<Drink/>}/>
         </Routes>

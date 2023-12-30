@@ -9,12 +9,6 @@ export default function Meal() {
   const[counter,setCounter] = useState(0)
   const nav = useNavigate()
 
-
-
-  
-  
-  
-
   //add to cart handler
   const addToCartHandler=()=>{
     if(counter <= 0)
@@ -27,7 +21,7 @@ export default function Meal() {
             {
              name: mealsMenu[mealIndex].meal,
              price : mealsMenu[mealIndex].price,
-             additions:[],
+             additions: additionsMenu,
              count:counter
             }
             ])
@@ -64,7 +58,9 @@ export default function Meal() {
         <div className='AddToCartAndBackButtonDiv'>
             <button onClick={addToCartHandler}>اضف الى السلة</button>
             <button onClick={() => {nav('/Menu')}}>رجعني على القائمة</button>
+            <button onClick={()=>{nav('/Informations')}}>خذني عالسلّة</button>
         </div>
+        
 
     </div>
   )
