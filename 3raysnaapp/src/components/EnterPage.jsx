@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext,} from 'react'
 import userContext from '../userContext'
 import FooterMenu from './FooterMenu'
 import OpenClose from './OpenClose'
-import arrow from '../images/arrow.png'
 import arrow1 from '../images/arrow1.png'
 
 
@@ -12,7 +11,7 @@ export default function EnterPage() {
 
     const OpenCloseFunc = ()=>
     {
-        if(openClose == true)
+        if(openClose === true)
         {
             return <FooterMenu/>
         }
@@ -29,7 +28,8 @@ export default function EnterPage() {
                     <p>بَسطة عَرايس🌮<br />
                        لجٰميع مُناسباتكم<br />
                         حَفلات خاصة، بوفيهات، عَقائق، جبلات حِناء<br />
-                     متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30 - 22:00                    </p>
+                     متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30 - 22:00                    
+                    </p>
         </div>
             <div className='StartGetDivEnterPageComponent'>
                 <h2 style={{display:open}} id='Start' >ابدا طلبيتك <br /> من هون</h2>

@@ -223,6 +223,121 @@ header h1
   border-bottom-right-radius: 0px;
 
 }
+/* ____________________________________Meal&DrinkCountersDiv_____________________________________ */
+.MealDrinkCountersDiv
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.MealDrinkCountersDiv h1
+{
+  width: 90px;
+  height: 50px;
+  font-family: 'Kufam', sans-serif;
+
+}
+
+.MealDrinkCountersDiv button
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgb(221, 195, 87);
+  color: #7d3b00;
+  border: 0px;
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px;
+
+}
+/* ____________________________________________AddToCartAndBackButton_____________________________________ */
+.AddToCartAndBackButtonDiv
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10%;
+}
+.AddToCartAndBackButtonDiv button
+{
+  width: 80%;
+  background-color: #7d3b00;
+  border-radius: 10px;
+  border: 5px solid rgb(221, 195, 87);
+  color: rgb(221, 195, 87);
+  height: 50px;
+  margin-bottom: 5%;
+  font-size: 25px;
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
+}
+/* _______________________________________________AdditionsDiv___________________________________ */
+.AdditionsDiv
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  width: 100%;
+}
+.AdditionsComponent
+{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.additionName
+{
+  width: 100%;
+}
+
+.AdditionsDiv h1
+{
+  font-size: 18px;
+  font-family: 'Kufam', sans-serif;
+  text-align: right;
+  margin-right: 5%;
+  color: rgb(73, 49, 42);
+
+}
+.AdditionCountersDiv
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.AdditionCountersDiv button
+{
+  background-color: #00677c;
+  color: rgb(221, 195, 87);
+  width: 40px;
+  height: 40px;
+  margin-right: 10%;
+  font-size: 25px;
+  border-radius: 10px;
+  font-family: 'Kufam', sans-serif;
+
+  border: 2px solid rgb(221, 195, 87);
+}
+.AdditionCountersDiv h2
+{
+  font-family: 'Kufam', sans-serif;
+  font-weight: 500;
+
+}
+.AdditionCountersDiv img
+{
+  width: 15%;
+}
 
 
 

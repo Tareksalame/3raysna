@@ -3,12 +3,18 @@ import './App.css';
 import { UsersProvider } from './userContext';
 import {BrowserRouter , Route ,Routes} from 'react-router-dom'
 import EnterPage from './components/EnterPage';
-import Manager from './components/Manager';
 import Menu from './components/Menu';
 import TakeAwayOrIn from './components/TakeAwayOrIn';
+import Meal from './components/Meal';
+import Drink from './components/Drink';
 
 
 function App() {
+
+  
+
+
+
   return (
     <div className="App">
     <UsersProvider>
@@ -17,7 +23,8 @@ function App() {
           <Route path='/' element={<EnterPage/>}/>
           <Route path='/Choose' element={<TakeAwayOrIn/>}/>
           <Route path='/Menu' element={<Menu/>}/>
-          <Route path='/Manager' element={<Manager/>}/>
+          <Route path='/Meal' element={<Meal/>}/>
+          <Route path='/Drink' element={<Drink/>}/>
         </Routes>
         </BrowserRouter>
       </UsersProvider>
