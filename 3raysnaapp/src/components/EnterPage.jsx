@@ -7,7 +7,7 @@ import arrow1 from '../images/arrow1.png'
 
 
 export default function EnterPage() {
-    const{openClose,close,open,setClose,setOpen ,setOpenClose} = useContext(userContext)
+    const{openClose,open} = useContext(userContext)
 
 
     const OpenCloseFunc = ()=>
@@ -29,8 +29,7 @@ export default function EnterPage() {
                     <p>بَسطة عَرايس🌮<br />
                        لجٰميع مُناسباتكم<br />
                         حَفلات خاصة، بوفيهات، عَقائق، جبلات حِناء<br />
-                     متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30
-                    </p>
+                     متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30 - 22:00                    </p>
         </div>
             <div className='StartGetDivEnterPageComponent'>
                 <h2 style={{display:open}} id='Start' >ابدا طلبيتك <br /> من هون</h2>

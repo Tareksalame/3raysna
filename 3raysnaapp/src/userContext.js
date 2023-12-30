@@ -1,4 +1,4 @@
-import {createContext, useEffect, useState} from 'react'
+import {createContext, useState} from 'react'
 
 const userContext = createContext();
 
@@ -8,12 +8,16 @@ export const UsersProvider = ({children})=>
   const [openClose ,setOpenClose] = useState(false);
   const[open,setOpen] = useState('none')
   const[close,setClose] = useState('flex')
+  const[takeAwayOrShipping,setTakeAwayOrShipping] = useState('Take Away')
+  const[distance,setDistance] = useState(null)
+
+
 
 
 
 
     return (
-    <userContext.Provider value={{close,setClose,open,setOpen,openClose ,setOpenClose,location, setLocation}}>
+    <userContext.Provider value={{distance,setDistance,takeAwayOrShipping,setTakeAwayOrShipping,close,setClose,open,setOpen,openClose ,setOpenClose,location, setLocation}}>
         {children}
     </userContext.Provider>
     )

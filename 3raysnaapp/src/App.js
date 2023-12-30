@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { UsersProvider } from './userContext';
-
 import {BrowserRouter , Route ,Routes} from 'react-router-dom'
-import GetLocation from './components/GetLocation';
 import EnterPage from './components/EnterPage';
 import Manager from './components/Manager';
+import Menu from './components/Menu';
+import TakeAwayOrIn from './components/TakeAwayOrIn';
 
 
 function App() {
@@ -15,6 +15,8 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route path='/' element={<EnterPage/>}/>
+          <Route path='/Choose' element={<TakeAwayOrIn/>}/>
+          <Route path='/Menu' element={<Menu/>}/>
           <Route path='/Manager' element={<Manager/>}/>
         </Routes>
         </BrowserRouter>

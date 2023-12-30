@@ -8,10 +8,10 @@ import cartIcon from '../images/carticon.png'
 export default function FooterMenu() {
   return (
     <div className='FooterComponent'>
-        <a href=""><img src={homeIcon} alt="Home" /></a>
-        <a href=""><img src={menuIcon} alt="Menu" /></a>
+        <a style={{borderLeft:'0px'}} href="/"><img src={homeIcon} alt="Home" /></a>
+        <a href="/Choose"><img src={menuIcon} alt="Menu" /></a>
         <a href=""><img src={wazeIcon} alt="Waze" /></a>
-        <a href=""><img src={cartIcon} alt="Cart" /></a>
+        <a href="/Cart"><img src={cartIcon} alt="Cart" /></a>
 
     </div>
   )
