@@ -3,15 +3,17 @@ import homeIcon from '../images/homeicon.png'
 import wazeIcon from '../images/wazeicon.png'
 import menuIcon from '../images/menuicon.png'
 import cartIcon from '../images/carticon.png'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function FooterMenu() {
+    const nav = useNavigate()
   return (
     <div className='FooterComponent'>
-        <a style={{borderLeft:'0px'}} href="/"><img src={homeIcon} alt="Home" /></a>
-        <a href="/Choose"><img src={menuIcon} alt="Menu" /></a>
-        <a href=""><img src={wazeIcon} alt="Waze" /></a>
-        <a href="/Cart"><img src={cartIcon} alt="Cart" /></a>
+        <button style={{borderLeft:'0px'}} onClick={()=>{nav('/')}}><img src={homeIcon} alt="Home" /></button>
+        <button onClick={()=>{nav('/Choose')}}><img src={menuIcon} alt="Menu" /></button>
+        <button href=""><img src={wazeIcon} alt="Waze" /></button>
+        <button onClick={()=>{nav('/Cart')}}><img src={cartIcon} alt="Cart" /></button>
 
     </div>
   )
