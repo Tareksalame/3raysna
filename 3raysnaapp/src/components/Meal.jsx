@@ -26,6 +26,7 @@ export default function Meal() {
             }
             ])
         }
+        alert('تمت الاضافة الى السلة')
         setCounter(0)
     }
   

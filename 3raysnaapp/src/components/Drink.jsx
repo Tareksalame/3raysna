@@ -24,13 +24,11 @@ export default function Drink() {
             }
             ])
         }
+        alert('تمت الاضافة الى السلة')
         setCounter(0)
-
-
     }
 
   return (
-    
     <div>
         <header style={{paddingTop:'20px',paddingBottom:'20px',marginBottom:'25px'}}>
             <h1 style={{margin:'0px'}}>عرايسنا ولا ازكى</h1>
@@ -47,7 +45,6 @@ export default function Drink() {
             <button onClick={addToCartHandler}>اضف الى السلة</button>
             <button onClick={() => {nav('/Menu')}}>رجعني على القائمة</button>
             <button onClick={()=>{nav('/Informations')}}>خذني عالسلّة</button>
-
         </div>
     </div>
   )
