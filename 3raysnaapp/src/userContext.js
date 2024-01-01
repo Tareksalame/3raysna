@@ -7,6 +7,9 @@ import water from './images/menu/water.jpg'
 import zero from './images/menu/zero.png'
 import cola from './images/menu/cola.jpeg'
 import fanta from './images/menu/fanta.jpeg'
+import check from './images/menu/checked.png'
+import x from './images/menu/x.png'
+
 
 const userContext = createContext();
 
@@ -16,6 +19,17 @@ export const UsersProvider = ({children})=>
     const [drinkIndex,setDrinkIndex] = useState(null)
     const [cart,setCart] = useState([])
     const cartArr = []
+    const [FinalCart,setFinalCart] = useState([])
+    const [FinalPrice,SetFinalPrice]= useState(0)
+
+
+
+    const [name,setName] = useState('')
+    const [PhoneNumber,setPhoneNumber] = useState('')
+    const [City,setCity] = useState('')
+    const [Email,setEmail] = useState('')
+    const [Notes,setNotes] = useState('')
+
 
 
     const mealsMenu = [
@@ -32,11 +46,11 @@ export const UsersProvider = ({children})=>
         {meal : "كوكا كولا" , price: 3 , img:cola },
     ]
     const additionsMenu = [
-        {add : '🥒خيار مخلل '    ,YesNo: false},
-        {add : '🧅بصل مع بقدونس' ,YesNo: false},
-        {add : '🍅بندورة'        ,YesNo: false},
-        {add : '🍈ملفوف'         ,YesNo: false},
-        {add : '🌶️فليفلة'        ,YesNo: false}
+        {add : '🥒خيار مخلل '    ,YesNo: x},
+        {add : '🧅بصل مع بقدونس' ,YesNo: x},
+        {add : '🍅بندورة'        ,YesNo: x},
+        {add : '🍈ملفوف'         ,YesNo: x},
+        {add : '🌶️فليفلة'        ,YesNo: x}
     ]
 
   const [location, setLocation] = useState(null);
@@ -49,10 +63,45 @@ export const UsersProvider = ({children})=>
 
 
 
+  const [restaurantLocation, setRestaurantLocation] = useState({
+    latitude: 32.4108052, // Replace with the actual latitude of the restaurant
+    longitude: 35.0371928, // Replace with the actual longitude of the restaurant
+  });
+
+
+const calculateDistance = () => {
+    if (location && restaurantLocation) {
+      const R = 6371; // Radius of the Earth in kilometers
+      const lat1 = location.latitude;
+      const lon1 = location.longitude;
+      const lat2 = restaurantLocation.latitude;
+      const lon2 = restaurantLocation.longitude;
+
+      const dLat = toRadians(lat2 - lat1);
+      const dLon = toRadians(lon2 - lon1);
+
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+      setDistance(R * c); // Distance in kilometers
+
+    }
+  };
+
+  const toRadians = (angle) => {
+    return (angle * Math.PI) / 180;
+  };
+
+
 
 
     return (
-    <userContext.Provider value={{additionsMenu,cartArr,cart,setCart,drinkIndex,setDrinkIndex,mealIndex,setMealIndex,mealsMenu,drinkMenu,distance,
+    <userContext.Provider value={{FinalPrice,SetFinalPrice,calculateDistance,FinalCart,setFinalCart,
+    name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,
+    additionsMenu,cartArr,cart,setCart,drinkIndex,setDrinkIndex,mealIndex,setMealIndex,mealsMenu,drinkMenu,distance,
     setDistance,takeAwayOrShipping,setTakeAwayOrShipping,
     close,setClose,open,setOpen,openClose ,
     setOpenClose,location, setLocation}}>

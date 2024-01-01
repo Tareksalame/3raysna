@@ -45,6 +45,7 @@ const LocationGetter = () => {
 
 
   const handleGetLocation = () => {
+    alert('الرجاء الموافقة على استخدام موقعك لاغراض التوصيل')
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -80,6 +81,7 @@ const LocationGetter = () => {
   return (
     <div>
       <button onClick={handleGetLocation}>بدي توصيل للبيت</button>
+
 
       {/* {location && ( */}
          {/* <div> */}

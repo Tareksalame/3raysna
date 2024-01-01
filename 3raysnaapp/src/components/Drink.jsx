@@ -19,10 +19,13 @@ export default function Drink() {
             {
              name: drinkMenu[drinkIndex].meal,
              price : drinkMenu[drinkIndex].price ,
+             additions: [],
              count:counter
             }
             ])
         }
+        setCounter(0)
+
 
     }
 
@@ -43,6 +46,8 @@ export default function Drink() {
         <div className='AddToCartAndBackButtonDiv'>
             <button onClick={addToCartHandler}>اضف الى السلة</button>
             <button onClick={() => {nav('/Menu')}}>رجعني على القائمة</button>
+            <button onClick={()=>{nav('/Informations')}}>خذني عالسلّة</button>
+
         </div>
     </div>
   )

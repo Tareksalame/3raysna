@@ -13,7 +13,52 @@ db.connect(dbURI);
 const nodemailer = require('nodemailer');
 
 
+const OrderSchema = db.Schema({
+    name:String,
+    phoneNumber: String,
+    City: String,
+    Email:String,
+    Notes:String,
+    TakeAwayOrShipping:String,
+    Location:Object,
+    Cart:Object,
+    FinalPrice:Number
+});
 
+const OrderModel = db.model('Order',OrderSchema);
+
+
+app.post('/BuyNow',async(req,res)=>
+{
+    let name = req.body.name;
+    let phonenumber = req.body.phoneNumber;
+    let city= req.body.city;
+    let email = req.body.email;
+    let notes = req.body.notes;
+    let TakeAwayOrShipping = req.body.TakeAwayOrShipping;
+    let location = req.body.location;
+    let cart = req.body.cart;
+    let FinalPrice = req.body.FinalPrice
+    const temp = await OrderModel.insertMany({
+        name:name,
+        phoneNumber: phonenumber,
+        City: city,
+        Email:email,
+        Notes:notes,
+        TakeAwayOrShipping:TakeAwayOrShipping,
+        Location:location,
+        Cart:cart,
+        FinalPrice:FinalPrice
+    })
+    if(temp !== null)
+    {
+        res.json('done')
+    }
+    else
+    {
+        res.json('error')
+    }
+})
 
 
 

@@ -13,7 +13,7 @@ export default function FooterMenu() {
         <button style={{borderLeft:'0px'}} onClick={()=>{nav('/')}}><img src={homeIcon} alt="Home" /></button>
         <button onClick={()=>{nav('/Choose')}}><img src={menuIcon} alt="Menu" /></button>
         <button href=""><img src={wazeIcon} alt="Waze" /></button>
-        <button onClick={()=>{nav('/Cart')}}><img src={cartIcon} alt="Cart" /></button>
+        <button onClick={()=>{nav('/Informations')}}><img src={cartIcon} alt="Cart" /></button>
     </div>
   )
 }

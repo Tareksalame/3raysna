@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import Additions from './Additions'
 
 export default function Meal() {
-  const{mealIndex,mealsMenu,cart,setCart,additionsMenu} = useContext(userContext)
+  const{calculateDistance,mealIndex,mealsMenu,cart,setCart,additionsMenu} = useContext(userContext)
   const[counter,setCounter] = useState(0)
   const nav = useNavigate()
 
@@ -26,7 +26,7 @@ export default function Meal() {
             }
             ])
         }
-
+        setCounter(0)
     }
   
   
@@ -38,6 +38,7 @@ export default function Meal() {
           return <Additions addToCartHandler={addToCartHandler} val={val}/>
       })
     }
+    
 
   return (
     <div>
