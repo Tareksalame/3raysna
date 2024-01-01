@@ -201,6 +201,20 @@ header h1
   margin-bottom: 5%;
 
 }
+.Menu a
+{
+  width: 80%;
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Kufam', sans-serif;
+  border: 5px solid rgb(73, 49, 42);
+  border-radius: 10px;
+  background-color: rgb(221, 195, 87);
+  color:rgb(73, 49, 42);
+  font-weight: 700;
+  margin-bottom: 5%;
+
+}
 .SpecialMenuMenuComponent
 {
   font-size: 30px;
@@ -629,7 +643,20 @@ header h1
 
 
 }
+.FooterComponent a
+{
+  margin: 0px;
+  background-color: transparent;
+  padding: 0px;
+  border-left: 3px solid rgb(221, 195, 87);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 3px solid rgb(221, 195, 87);
 
+
+}
 .FooterComponent img
 {
   width: 40%;

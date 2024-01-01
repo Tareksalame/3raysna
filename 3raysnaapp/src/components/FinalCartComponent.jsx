@@ -143,6 +143,11 @@ export default function FinalCartComponent() {
 
         const BuyNowFunction = ()=>
         {
+            if(FinalPrice < 15 || FinalPrice === null)
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else{
             fetch('/BuyNow', 
             {
                 headers:{
@@ -164,9 +169,9 @@ export default function FinalCartComponent() {
             }).then((res)=>{return res.json()})
             .then((data)=>
             {
-              if(data == 'done')
+              if(data === 'done')
               {
-                alert('\nطلبيّتك وصلتنا' + '\nرقم طلبيتك' + {OrderNumber} + '\n خذ سكرين شوت' + '\nالدفع نقدي عند الاستلام')
+                alert('\nطلبيّتك وصلتنا' + '\nرقم طلبيتك' + OrderNumber + '\n خذ سكرين شوت' + '\nالدفع نقدي عند الاستلام')
                 setName('')
                 setPhoneNumber('')
                 setCity('')
@@ -184,6 +189,7 @@ export default function FinalCartComponent() {
                 alert('لم تصل الطلبية الرجاء تحديث الصفحة واعادة المحاولة مرة اخرى')
               }
             }).catch((err)=>{return err})
+        }
         }
 
 

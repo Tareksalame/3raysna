@@ -21,7 +21,7 @@ export const UsersProvider = ({children})=>
     const cartArr = []
     const [FinalCart,setFinalCart] = useState([])
     const [FinalPrice,SetFinalPrice]= useState(0)
-    const [OrderNumber,setOrderNumber] = useState(null)
+    const [OrderNumber,setOrderNumber] = useState(0)
 
 
 
