@@ -23,9 +23,9 @@ export default function Drink() {
              count:counter
             }
             ])
-        }
-        alert('تمت الاضافة الى السلة')
-        setCounter(0)
+            alert('تمت الاضافة الى السلة')
+            setCounter(0)
+    }
     }
 
   return (

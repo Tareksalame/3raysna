@@ -25,9 +25,9 @@ export default function Meal() {
              count:counter
             }
             ])
+            alert('تمت الاضافة الى السلة')
+            setCounter(0)
         }
-        alert('تمت الاضافة الى السلة')
-        setCounter(0)
     }
   
   
