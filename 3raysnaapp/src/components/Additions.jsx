@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
 import check from '../images/menu/checked.png'
-import x from '../images/menu/x.png'
+import x from '../images/menu/No.png'
 import userContext from '../userContext'
 
 

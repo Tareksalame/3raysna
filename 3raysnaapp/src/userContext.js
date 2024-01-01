@@ -8,7 +8,7 @@ import zero from './images/menu/zero.png'
 import cola from './images/menu/cola.jpeg'
 import fanta from './images/menu/fanta.jpeg'
 import check from './images/menu/checked.png'
-import x from './images/menu/x.png'
+import x from './images/menu/No.png'
 
 
 const userContext = createContext();
