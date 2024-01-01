@@ -563,6 +563,11 @@ header h1
   font-weight: 700;
   margin-bottom: 5%;
 }
+.FinalCartReadyButtonsDiv h2
+{
+  font-family: 'Kufam', sans-serif;
+  color: rgb(73, 49, 42);
+}
 /* ______________________________________________FinalPriceForOrderAndDelivery____________________________ */
 .FinalPriceForOrderAndDelivery
 {

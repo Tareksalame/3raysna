@@ -9,6 +9,7 @@ import Meal from './components/Meal';
 import Drink from './components/Drink';
 import InformationsPage from './components/InformationsPage';
 import FinalCartComponent from './components/FinalCartComponent';
+import ThankYouPage from './components/ThankYouPage';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
           <Route path='/Meal' element={<Meal/>}/>
           <Route path='/Cart' element={<FinalCartComponent/>}/>
           <Route path='/Drink' element={<Drink/>}/>
+          <Route path='/ThankYouPage' element={<ThankYouPage/>}/>
+
         </Routes>
         </BrowserRouter>
       </UsersProvider>

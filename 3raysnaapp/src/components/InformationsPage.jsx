@@ -4,7 +4,8 @@ import userContext from '../userContext'
 
 export default function InformationsPage() {
 
-    const {calculateDistance,distance,takeAwayOrShipping,location,cart,name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,FinalCart,setFinalCart} = useContext(userContext)
+    const {OrderNumber,setOrderNumber,
+        calculateDistance,distance,takeAwayOrShipping,location,cart,name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,FinalCart,setFinalCart} = useContext(userContext)
     const nav = useNavigate()
 
     const checkInformations = ()=>
@@ -24,6 +25,7 @@ export default function InformationsPage() {
         else
         {
 
+                generateRandomNumber()
                 calculateDistance()
                 nav('/Cart')
                 // setFinalCart([...FinalCart,
@@ -41,6 +43,15 @@ export default function InformationsPage() {
         }
 
     }
+
+
+    const generateRandomNumber = () => {
+        const min = 1000000; // Smallest 7-digit number
+        const max = 9999999; // Largest 7-digit number
+        const newRandomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        setOrderNumber(newRandomNumber);
+      };
+
   return (
     <div className='InformationsPageComponent'>
         <h1>عبّي تفاصيلك <br /> عشان نكمّل الطلبيّة</h1>

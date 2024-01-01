@@ -5,7 +5,8 @@ import LocationGetter from './GetLocation'
 import { useNavigate } from 'react-router-dom'
 
 export default function FinalCartComponent() {
-    const{setLocation,setTakeAwayOrShipping,distance,takeAwayOrShipping,location,cart,setCart,
+    const{OrderNumber,setOrderNumber,
+        setLocation,setTakeAwayOrShipping,distance,takeAwayOrShipping,location,cart,setCart,
         name,setName,PhoneNumber,setPhoneNumber,
         City,setCity,Email,setEmail,Notes,setNotes,
         FinalPrice,SetFinalPrice} = useContext(userContext)
@@ -157,14 +158,15 @@ export default function FinalCartComponent() {
                     TakeAwayOrShipping:takeAwayOrShipping,
                     location:location,
                     cart:cart,
-                    FinalPrice:FinalPrice
+                    FinalPrice:FinalPrice,
+                    OrderNumber:OrderNumber
                 })
             }).then((res)=>{return res.json()})
             .then((data)=>
             {
               if(data == 'done')
               {
-                alert('طلبيّتك وصلتنا, الدفع نقدي عند الاستلام')
+                alert('\nطلبيّتك وصلتنا' + '\nرقم طلبيتك' + {OrderNumber} + '\n خذ سكرين شوت' + '\nالدفع نقدي عند الاستلام')
                 setName('')
                 setPhoneNumber('')
                 setCity('')
@@ -174,7 +176,8 @@ export default function FinalCartComponent() {
                 setLocation(null)
                 setCart([])
                 SetFinalPrice(0)
-                setTimeout(() =>nav("/"), 1500)
+                nav('/')
+                // setTimeout(() =>nav("/"), 1500)
               }
               else
               {
@@ -182,6 +185,8 @@ export default function FinalCartComponent() {
               }
             }).catch((err)=>{return err})
         }
+
+
 
   return (
     <div className='FinalCartComponent'>
@@ -223,6 +228,7 @@ export default function FinalCartComponent() {
             marginTop:'7%',
         }}>
             {FinalPriceCalculate()}
+            <h2>رقم الطلبية - {OrderNumber}</h2>
         <button onClick={BuyNowFunction}>
             جاهز
         </button>

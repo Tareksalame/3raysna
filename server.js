@@ -22,7 +22,8 @@ const OrderSchema = db.Schema({
     TakeAwayOrShipping:String,
     Location:Object,
     Cart:Object,
-    FinalPrice:Number
+    FinalPrice:Number,
+    OrderNumber:Number
 });
 
 const OrderModel = db.model('Order',OrderSchema);
@@ -39,6 +40,8 @@ app.post('/BuyNow',async(req,res)=>
     let location = req.body.location;
     let cart = req.body.cart;
     let FinalPrice = req.body.FinalPrice
+    let OrderNumber = req.body.OrderNumber
+
     const temp = await OrderModel.insertMany({
         name:name,
         phoneNumber: phonenumber,
@@ -48,7 +51,8 @@ app.post('/BuyNow',async(req,res)=>
         TakeAwayOrShipping:TakeAwayOrShipping,
         Location:location,
         Cart:cart,
-        FinalPrice:FinalPrice
+        FinalPrice:FinalPrice,
+        OrderNumber:OrderNumber
     })
     if(temp !== null)
     {

@@ -21,6 +21,7 @@ export const UsersProvider = ({children})=>
     const cartArr = []
     const [FinalCart,setFinalCart] = useState([])
     const [FinalPrice,SetFinalPrice]= useState(0)
+    const [OrderNumber,setOrderNumber] = useState(null)
 
 
 
@@ -99,7 +100,8 @@ const calculateDistance = () => {
 
 
     return (
-    <userContext.Provider value={{FinalPrice,SetFinalPrice,calculateDistance,FinalCart,setFinalCart,
+    <userContext.Provider value={{OrderNumber,setOrderNumber,
+        FinalPrice,SetFinalPrice,calculateDistance,FinalCart,setFinalCart,
     name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,
     additionsMenu,cartArr,cart,setCart,drinkIndex,setDrinkIndex,mealIndex,setMealIndex,mealsMenu,drinkMenu,distance,
     setDistance,takeAwayOrShipping,setTakeAwayOrShipping,
