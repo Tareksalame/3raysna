@@ -143,7 +143,7 @@ export default function FinalCartComponent() {
 
         const BuyNowFunction = ()=>
         {
-            if(FinalPrice < 15 || FinalPrice === null)
+            if(FinalPrice < 30 || FinalPrice === null)
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
