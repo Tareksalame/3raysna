@@ -1,14 +1,66 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import fork from '../images/Open/fork.png'
+import pizza from '../images/Open/pizza.png'
+import salad from '../images/Open/salad.png'
+import tiktokblack from '../images/tiktokblack.png'
+import instagramblack from '../images/instablack.png'
+import whatsAppblack from '../images/whatsappblack.png'
+import telephoneblack from '../images/telephoneblack.png'
 
 export default function ThankYouPage() {
+    const nav = useNavigate()
+    const OpenFunction = () =>
+    {
+        setTimeout(() => {
+            nav('/EnterPage')
+        }, 5000);
+    }
+
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>
+        {
+            if(entry.isIntersecting)
+            {
+                entry.target.classList.add('show')
+            }else
+            {
+                entry.target.classList.remove('show')
+            }
+        })
+    });
+    
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el)=>{observer.observe(el)})
+    
   return (
-    <div>
-        <h1>شكرًا الاسم، سيصلك الطلب باسرع وقت ممكن</h1>
+    <div className='AnimationPageDiv'>
+        {OpenFunction()}
+        <header>
+            <h1>عرايسنا ولا ازكى</h1>
+        </header>
+        <div className='OpenAnimationDiv'>
+            <img id='Fork' src={fork} alt="Fork" />
+            <img id='Pizza' src={pizza} alt="Pizza" />
+            <img id='Salad' src={salad} alt="Salad" />
+        </div>
+        {/* <h1>شكرًا الاسم، سيصلك الطلب باسرع وقت ممكن</h1>
         <h2>رقم طلبيتك - </h2>
         <h2>رقم هاتفك - </h2>
         <h2>تيك اواي او شيبينج- </h2>
         <h2>كارت- </h2>
-        <h2>السعر- </h2>
+        <h2>السعر- </h2> */}
+        <div className="hidden" id="miniuDiv">
+            {/* <!-- MINIU --> */}
+            <h3 id="design">Designed & Developed By - <span>Tarek Ben Jehad</span></h3>
+            <div>
+              <a href="https://wa.me/972525272910"><img src={whatsAppblack} alt="" /></a>
+              <a href="https://www.tiktok.com/@tarekbenjehad?is_from_webapp=1&sender_device=pc"><img src={tiktokblack} alt="" /></a>
+              <a href="https://www.instagram.com/tarekbenjehad?igsh=OGQ5ZDc2ODk2ZA%3D%3D"><img src={instagramblack} alt="" /></a>
+              <a href="tel:0525272910"><img src={telephoneblack} alt=""/></a>
+            </div>
+        </div>
     </div>
   )
 }

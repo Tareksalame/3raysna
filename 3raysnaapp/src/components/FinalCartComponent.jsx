@@ -1,8 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import userContext from '../userContext'
 import CartShowComponent from './CartShowComponent'
 import LocationGetter from './GetLocation'
 import { useNavigate } from 'react-router-dom'
+import x from '../images/menu/trash.png'
+import Trash from './Trash'
+
 
 export default function FinalCartComponent() {
     const{OrderNumber,setOrderNumber,
@@ -11,6 +14,7 @@ export default function FinalCartComponent() {
         City,setCity,Email,setEmail,Notes,setNotes,
         FinalPrice,SetFinalPrice} = useContext(userContext)
         const nav = useNavigate()
+        const [trash,setTrash] = useState('none')
         const TakeAwayOrShippingFunction = ()=>
         {
             if(takeAwayOrShipping === 'shipping')
@@ -181,7 +185,7 @@ export default function FinalCartComponent() {
                 setLocation(null)
                 setCart([])
                 SetFinalPrice(0)
-                nav('/')
+                nav('/EnterPage')
                 // setTimeout(() =>nav("/"), 1500)
               }
               else
@@ -192,7 +196,18 @@ export default function FinalCartComponent() {
         }
         }
 
+        const trashFunction = ()=>
+        {
+            if(trash === 'none')
+            {
+                setTrash('flex')
+            }
+            else
+            {
+                setTrash('none')
 
+            }
+        }
 
   return (
     <div className='FinalCartComponent'>
@@ -225,6 +240,10 @@ export default function FinalCartComponent() {
         {TakeAwayOrShippingFunction()}
         {ShowShippingOrTakeAway()}
 
+        <img onClick={trashFunction} width={'10%'} src={x} alt="" />
+        <div style={{display:trash}}>
+        <Trash setTrash={setTrash}/>
+        </div>
         {CartShow()}
         <div className='FinalCartReadyButtonsDiv' style={{
             display: 'flex',

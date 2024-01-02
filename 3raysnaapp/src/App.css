@@ -28,7 +28,62 @@ header h1
     transform: translateY(-20px); /* Midpoint position, adjust the value as needed */
   }
 }
-
+/* _______________________________________OpenAnimationDiv________________________________________ */
+.AnimationPageDiv
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.OpenAnimationDiv
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70%;
+}
+@keyframes Fork {
+  0%, 50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25%, 75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes Pizza {
+  0%, 50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%, 75% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.OpenAnimationDiv img
+{
+  width: 15%;
+  margin: 10px; /* Adjust margin as needed */
+}
+#Fork
+{
+  animation: Fork 2s linear infinite;
+  animation-delay: 0s, 5s, 2.5s; /* Adjust the delays for synchronization */
+}
+#Pizza
+{
+  animation: Pizza 2s linear infinite;
+  animation-delay: 0s, 5s, 2.5s; /* Adjust the delays for synchronization */
+}
+#Salad
+{
+  animation: Fork 2s linear infinite;
+  animation-delay: 0s, 5s, 2.5s; /* Adjust the delays for synchronization */
+}
 /* ______________________________________________ EnterPageComponent _________________________________________ */
 .EnterPageComponent
 {
@@ -594,6 +649,36 @@ header h1
   border:5px solid #7d3b00;
   font-family: 'Kufam', sans-serif;
 }
+/* _________________________________TrashComponent_____________________________________ */
+.TrashComponent
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00677c;
+  height: 350px;
+  border-radius: 15px;
+  padding-bottom: 5%;
+  margin-top: 5%;
+}
+.TrashComponent h1
+{
+  color:white;
+  font-family: 'Kufam', sans-serif;
+  font-size: 25px;
+}
+.TrashComponent button
+{
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 0px;
+  font-size: larger;
+  font-family: 'Kufam', sans-serif;
+  color: white;
+}
 
 
 
@@ -663,4 +748,71 @@ header h1
   
 }
 
+
+
+/* _____________________________MINIU___________________________________ */
+#miniuDiv
+{
+    /* bottom: 0px; */
+    /* position: fixed; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    flex-direction: column;
+    background: transparent;
+    color: white;
+    align-self: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    padding-bottom: 1%;
+}
+#design
+{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#miniuDiv h3
+{
+  font-size: 15px;
+  font-weight: 600;
+}
+#miniuDiv div
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 1%;
+
+}
+#miniuDiv img
+{
+  width: 40%;
+}
+
+#miniuDiv span
+{
+  font-size: 25px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+}
+/* .hidden
+{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-100%);
+}
+.show
+{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0%);
+
+} */
 

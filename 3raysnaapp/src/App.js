@@ -23,14 +23,14 @@ function App() {
     <UsersProvider>
         <BrowserRouter>
         <Routes>
-          <Route path='/' element={<EnterPage/>}/>
+          <Route path='/EnterPage' element={<EnterPage/>}/>
           <Route path='/Choose' element={<TakeAwayOrIn/>}/>
           <Route path='/Menu' element={<Menu/>}/>
           <Route path='/Informations' element={<InformationsPage/>}/>
           <Route path='/Meal' element={<Meal/>}/>
           <Route path='/Cart' element={<FinalCartComponent/>}/>
           <Route path='/Drink' element={<Drink/>}/>
-          <Route path='/ThankYouPage' element={<ThankYouPage/>}/>
+          <Route path='/' element={<ThankYouPage/>}/>
 
         </Routes>
         </BrowserRouter>
