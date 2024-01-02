@@ -14,7 +14,7 @@ export default function ThankYouPage() {
     {
         setTimeout(() => {
             nav('/EnterPage')
-        }, 5000);
+        }, 6000);
     }
 
 

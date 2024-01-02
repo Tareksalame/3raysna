@@ -758,13 +758,15 @@ header h1
     justify-content: center;
     align-items: center;
     display: flex;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     flex-direction: column;
     background: transparent;
     color: white;
+    margin-top: 50%;
+    width: 50%;
     align-self: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Kufam', sans-serif;
     font-size: 15px;
     padding-bottom: 1%;
 }
@@ -792,7 +794,7 @@ header h1
 }
 #miniuDiv img
 {
-  width: 40%;
+  width: 50%;
 }
 
 #miniuDiv span
