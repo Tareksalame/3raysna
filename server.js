@@ -23,7 +23,8 @@ const OrderSchema = db.Schema({
     Location:Object,
     Cart:Object,
     FinalPrice:Number,
-    OrderNumber:Number
+    OrderNumber:Number,
+    OrderStatus:String
 });
 
 const OrderModel = db.model('Order',OrderSchema);
@@ -41,6 +42,7 @@ app.post('/BuyNow',async(req,res)=>
     let cart = req.body.cart;
     let FinalPrice = req.body.FinalPrice
     let OrderNumber = req.body.OrderNumber
+    let OrderStatus = req.body.OrderStatus
 
     const temp = await OrderModel.insertMany({
         name:name,
@@ -52,7 +54,9 @@ app.post('/BuyNow',async(req,res)=>
         Location:location,
         Cart:cart,
         FinalPrice:FinalPrice,
-        OrderNumber:OrderNumber
+        OrderNumber:OrderNumber,
+        OrderStatus:OrderStatus
+
     })
     if(temp !== null)
     {

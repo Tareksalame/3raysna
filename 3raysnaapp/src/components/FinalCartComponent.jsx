@@ -168,7 +168,8 @@ export default function FinalCartComponent() {
                     location:location,
                     cart:cart,
                     FinalPrice:FinalPrice,
-                    OrderNumber:OrderNumber
+                    OrderNumber:OrderNumber,
+                    OrderStatus:'Pending'
                 })
             }).then((res)=>{return res.json()})
             .then((data)=>
