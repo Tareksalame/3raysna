@@ -577,14 +577,14 @@ header h1
 {
   width: 50%;
   height: 80px;
-  background-color: rgba(255, 255, 255, .3);
-  border: 3px solid #7d3b00;
+  margin-left: 5%;
   border-radius: 8px;
   font-size: 18px;
-  font-family: 'Kufam', sans-serif;
   text-align: right;
+  background-color: rgba(255, 255, 255, .3);
+  border: 3px solid #7d3b00;
+  font-family: 'Kufam', sans-serif;
   color: rgb(73, 49, 42);
-  margin-left: 5%;
 }
 /* _______________________________________CartShowComponent_______________________________________ */
 .CartShowComponent

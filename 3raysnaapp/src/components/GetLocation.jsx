@@ -79,7 +79,7 @@ const LocationGetter = () => {
   };
 
   return (
-    <div>
+    <div style={{marginTop:'5%'}}>
       <button onClick={handleGetLocation}>بدي توصيل للبيت</button>
 
 
