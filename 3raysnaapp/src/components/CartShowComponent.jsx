@@ -99,9 +99,9 @@ export default function CartShowComponent(props) {
         <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}>
         <h5>الوجبة</h5>
         <div style={{justifyContent:'center'}} className='MealDrinkCountersDiv'>
-            <button style={{width:'50px',height:'50px',background:'rgb(255, 63, 91)'}} onClick={mealToTrash}>
-        <img  style={{marginRight:'0px'}} width={'100%'} src={trash} alt="" />
-        </button>
+        {/* <button style={{width:'50px',height:'50px',background:'rgb(255, 63, 91)'}} onClick={mealToTrash}> */}
+        <img onClick={mealToTrash}  style={{marginRight:'0px'}} width={'30%'} src={trash} alt="" />
+        {/* </button> */}
         <h2>{props.val.name}</h2>
         </div>
         </div>
