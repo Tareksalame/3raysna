@@ -55,10 +55,10 @@ export default function ThankYouPage() {
             {/* <!-- MINIU --> */}
             <h3 id="design">Designed & Developed By - <span>Tarek Ben Jehad</span></h3>
             <div>
-              <a href="https://wa.me/972525272910"><img src={whatsAppblack} alt="" /></a>
-              <a href="https://www.tiktok.com/@tarekbenjehad?is_from_webapp=1&sender_device=pc"><img src={tiktokblack} alt="" /></a>
-              <a href="https://www.instagram.com/tarekbenjehad?igsh=OGQ5ZDc2ODk2ZA%3D%3D"><img src={instagramblack} alt="" /></a>
-              <a href="tel:0525272910"><img src={telephoneblack} alt=""/></a>
+              <a target='_blank' href="https://wa.me/972525272910"><img src={whatsAppblack} alt="" /></a>
+              <a target='_blank' href="https://www.tiktok.com/@tarekbenjehad?is_from_webapp=1&sender_device=pc"><img src={tiktokblack} alt="" /></a>
+              <a target='_blank' href="https://www.instagram.com/tarekbenjehad?igsh=OGQ5ZDc2ODk2ZA%3D%3D"><img src={instagramblack} alt="" /></a>
+              <a target='_blank' href="tel:0525272910"><img src={telephoneblack} alt=""/></a>
             </div>
         </div>
     </div>

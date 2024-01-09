@@ -105,13 +105,21 @@ export default function FinalCartComponent() {
         }
 
 
-        const CartShow = ()=>
-        {
-            return cart.map((val)=>
-            {
-                return <CartShowComponent val={val}/>
-            })
-        }
+        // const CartShow = ()=>
+        // {
+        //     return cart.map((val)=>
+        //     {
+        //         return <CartShowComponent val={val}/>
+        //     })
+        // }
+
+        const CartShow = () => {
+            // Use filter to exclude items with count equal to 0
+            const filteredCart = cart.filter((val) => val.count !== 0);
+          
+            // Map over the filtered array
+            return filteredCart.map((val) => <CartShowComponent key={val.id} val={val} />);
+          };
 
 
         const FinalPriceCalculate = ()=>
