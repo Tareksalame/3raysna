@@ -35,14 +35,14 @@ export default function Menu() {
     {
         return mealsMenu.map((val,idx)=>
         {
-            return <MealsComponent idx={idx} val={val}/>
+            return <MealsComponent key={idx+1} idx={idx} val={val}/>
         })
     }
     const drinksShow = ()=>
     {
         return drinkMenu.map((val,idx)=>
         {
-            return <DrinksComponent idx={idx} val={val}/>
+            return <DrinksComponent key={idx+1} idx={idx} val={val}/>
         })
     }
   return (

@@ -34,10 +34,22 @@ export default function Meal() {
     //additionsMenu map Function
     const additionsList = () => 
     {
-      return additionsMenu.map((val)=>
+      return additionsMenu.map((val,idx)=>
       {
-          return <Additions addToCartHandler={addToCartHandler} val={val}/>
+          return <Additions key={idx+1} addToCartHandler={addToCartHandler} val={val}/>
       })
+    }
+
+    const plus = ()=>
+    {
+        setCounter(counter + 1)
+    }
+    const minus = ()=>
+    {
+        if(counter > 0)
+        {
+            setCounter(counter - 1)
+        }
     }
     
 
@@ -50,8 +62,8 @@ export default function Meal() {
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{mealsMenu[mealIndex].meal}</h2>
         <h2 style={{backgroundColor:'#00677c',color:'white'}}>{mealsMenu[mealIndex].price} ₪</h2>
         <div className='MealDrinkCountersDiv'>
-            <button onClick={()=>{setCounter(counter+1)}}>+</button>
-            <button onClick={()=>{setCounter(counter-1)}}>-</button>
+            <button onClick={plus}>+</button>
+            <button onClick={minus}>-</button>
             <h1>{counter}</h1>
         </div>
         <div className='AdditionsDiv'>

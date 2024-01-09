@@ -13,7 +13,7 @@ export default function MealsComponent(props) {
     nav('/Meal')
   }
   return (
-    <div
+    <div 
     onClick={chooseMeal}  className='MealsComponent'>
         <img className='MealImageMealsComponent'  src={props.val.img} alt="MealImage" />
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{props.val.meal}</h2>

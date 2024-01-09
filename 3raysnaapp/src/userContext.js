@@ -23,8 +23,6 @@ export const UsersProvider = ({children})=>
     const [FinalPrice,SetFinalPrice]= useState(0)
     const [OrderNumber,setOrderNumber] = useState(0)
 
-
-
     const [name,setName] = useState('')
     const [PhoneNumber,setPhoneNumber] = useState('')
     const [City,setCity] = useState('')

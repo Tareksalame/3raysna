@@ -8,7 +8,8 @@ import trash from '../images/menu/trash.png'
 
 export default function CartShowComponent(props) {
     const [counter,setCounter] = useState(props.val.count)
-    const [display,setDisplay] = useState('flex')
+    const[display,setDisplay] = useState('flex')
+
     const{OrderNumber,setOrderNumber,
         setLocation,setTakeAwayOrShipping,distance,takeAwayOrShipping,location,cart,setCart,
         name,setName,PhoneNumber,setPhoneNumber,
@@ -57,27 +58,25 @@ export default function CartShowComponent(props) {
 
     const AdditionsArr = ()=>
     {
-        return props.val.additions.map((addition)=>
+        return props.val.additions.map((addition,idx)=>
         {
-            return <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}> <img style={{marginLeft:'10%'}} width={'5%'} src={addition.YesNo} alt="YesNo" /> <h6>----------</h6><h6 style={{marginRight:'10%'}}>{addition.add}</h6></div>
+            return <div key={idx+1} style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}> <img style={{marginLeft:'10%'}} width={'5%'} src={addition.YesNo} alt="YesNo" /> <h6>----------</h6><h6 style={{marginRight:'10%'}}>{addition.add}</h6></div>
         })
     }
 
     const plus = ()=>
     {
         props.val.count = props.val.count + 1
-        setCounter(props.val.count);
         FinalPriceCalculate()
     }
     const minus = ()=>
     {
-        if(props.val.count > 0 && counter > 0)
+        if(props.val.count > 0 )
         {
             props.val.count = props.val.count - 1
             FinalPriceCalculate()
-            setCounter(props.val.count);
         }
-        else if(props.val.count === 0 && counter === 0)
+        else if(props.val.count === 0 )
         {
             setDisplay('none')
         }
@@ -90,18 +89,14 @@ export default function CartShowComponent(props) {
     {
         props.val.count = 0
         setDisplay('none')
-        setCounter(0)
         FinalPriceCalculate()
     }
   return (
-    <div className='CartShowComponent' style={{display:display,flexDirection:'column',justifyContent:'space-between',alignItems:'center'}}>
+    <div  className='CartShowComponent' style={{display:display,flexDirection:'column',justifyContent:'space-between',alignItems:'center'}}>
         <div style={{display:'flex',flexDirection:'row-reverse',justifyContent:'space-around',alignItems:'center'}}>
         <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}>
         <h5>الوجبة</h5>
         <div style={{justifyContent:'center'}} className='MealDrinkCountersDiv'>
-        {/* <button style={{width:'50px',height:'50px',background:'rgb(255, 63, 91)'}} onClick={mealToTrash}> */}
-        <img onClick={mealToTrash}  style={{marginRight:'0px'}} width={'30%'} src={trash} alt="" />
-        {/* </button> */}
         <h2>{props.val.name}</h2>
         </div>
         </div>
@@ -114,7 +109,7 @@ export default function CartShowComponent(props) {
         <div className='MealDrinkCountersDiv'>
             <button style={{width:'40px' , height:'40px'}} onClick={plus}>+</button>
             <button style={{width:'40px' , height:'40px'}} onClick={minus}>-</button>
-        <h2 style={{marginLeft:'20px'}}>{counter}</h2>
+        <h2 style={{marginLeft:'20px'}}>{props.val.count}</h2>
         </div>
         </div>
         </div>

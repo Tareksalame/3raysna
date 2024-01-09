@@ -118,7 +118,7 @@ export default function FinalCartComponent() {
             const filteredCart = cart.filter((val) => val.count !== 0);
           
             // Map over the filtered array
-            return filteredCart.map((val) => <CartShowComponent key={val.id} val={val} />);
+            return filteredCart.map((val,idx) => <CartShowComponent key={idx+1} val={val} />);
           };
 
 
