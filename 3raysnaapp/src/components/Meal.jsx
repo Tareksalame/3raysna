@@ -3,6 +3,7 @@ import userContext from '../userContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Additions from './Additions'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 export default function Meal() {
   const{calculateDistance,mealIndex,mealsMenu,cart,setCart,additionsMenu} = useContext(userContext)
@@ -55,8 +56,8 @@ export default function Meal() {
 
   return (
     <div>
-        <header style={{paddingTop:'20px',paddingBottom:'20px',marginBottom:'25px'}}>
-            <h1 style={{margin:'0px'}}>عرايسنا ولا ازكى</h1>
+<header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
         <img className='MealImageMealsComponent'  src={mealsMenu[mealIndex].img} alt="MealImage" />
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{mealsMenu[mealIndex].meal}</h2>

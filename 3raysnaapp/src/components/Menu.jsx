@@ -4,6 +4,7 @@ import FooterMenu from './FooterMenu'
 import userContext from '../userContext'
 import DrinksComponent from './DrinksComponent'
 import LocationGetter from './GetLocation'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 
 
@@ -48,8 +49,8 @@ export default function Menu() {
   return (
     <div 
     className='Menu'>
-        <header>
-            <h1>عرايسنا ولا ازكى</h1>
+         <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
         {ShowShippingOrTakeAway()}
         <h1 className='SpecialMenuMenuComponent'>

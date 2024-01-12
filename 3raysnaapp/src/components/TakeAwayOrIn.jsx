@@ -8,6 +8,7 @@ import k3 from '../images/menu/k3.jpg'
 import k4 from '../images/menu/k4.jpg'
 import k5 from '../images/menu/k5.jpg'
 import arrow1 from '../images/arrow1.png'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 
 
@@ -22,8 +23,8 @@ export default function TakeAwayOrIn() {
     }
   return (
     <div className='TakeAwayOrInComponent'>
-        <header>
-            <h1>عرايسنا ولا ازكى</h1>
+        <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
         <div style={{marginTop:'5%'}}>
         <h2 style={{marginBottom:'2%'}}>اختار الّي بناسبك عشان نبلّش الطلبية</h2>

@@ -32,8 +32,8 @@ export const UsersProvider = ({children})=>
 
 
     const mealsMenu = [
-        {meal : 'رول عرايس' , price: 15 , img:رول},
-        {meal : '2رول عرايس' , price: 25    , img:رول},
+        {meal : 'رول عرايس سيخ واحد' , price: 15 , img:رول},
+        {meal : 'رول عرايس سيخين' , price: 25    , img:رول},
         {meal : 'خبزة عرايس' , price: 15    , img:خبز},
         {meal : 'مكس عرايس' , price: 35     , img:مكس},
         {meal : 'بوكس خبز مقطع' , price: 20 , img:مقطع},

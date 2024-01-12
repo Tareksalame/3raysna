@@ -12,11 +12,11 @@ export default function OpenClose() {
 
 
     const now = new Date();
-    // const day = now.toLocaleDateString('en-US', { weekday: 'long' });
-    // const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+    const day = now.toLocaleDateString('en-US', { weekday: 'long' });
+    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
 
-    const day = 'Friday'
-    const time = '20:00'
+    // const day = 'Friday'
+    // const time = '20:00'
     function isRestaurantOpen(day, time) {
         // Check if the day is Thursday or Friday
         if (day === 'Thursday' || day === 'Friday' || day === 'Saturday') {
@@ -24,7 +24,7 @@ export default function OpenClose() {
           const formattedTime = parseInt(time.replace(':', ''), 10);
       
           // Check if the time is between 18:30 (1830) and 22:00 (2200)
-          if (formattedTime >= 1830 && formattedTime <= 2200) {
+          if (formattedTime >= 1830 && formattedTime <= 2300) {
             setOpenClose(true) // The restaurant is open
             setOpen('flex')
             setClose('none')

@@ -5,6 +5,7 @@ import LocationGetter from './GetLocation'
 import { useNavigate } from 'react-router-dom'
 import x from '../images/menu/trash.png'
 import Trash from './Trash'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 
 export default function FinalCartComponent() {
@@ -83,7 +84,7 @@ export default function FinalCartComponent() {
                     marginTop:'10%',
                     marginBottom:'10%'
                 }}>
-                    <button onClick={TakeAway}>بدي اجي اوخذها</button>
+                    {/* <button onClick={TakeAway}>بدي اجي اوخذها</button> */}
                 </div>
             }
             else
@@ -98,7 +99,7 @@ export default function FinalCartComponent() {
                     marginTop:'10%',
                     marginBottom:'10%'
                 }}>
-                    <button onClick={handleGetLocation}>بدي توصيل للبيت</button>
+                    {/* <button onClick={handleGetLocation}>بدي توصيل للبيت</button> */}
 
                 </div>
             }
@@ -220,8 +221,8 @@ export default function FinalCartComponent() {
 
   return (
     <div className='FinalCartComponent'>
-        <header style={{paddingTop:'20px',paddingBottom:'20px',marginBottom:'25px'}}>
-            <h1 style={{margin:'0px'}}>عرايسنا ولا ازكى</h1>
+        <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
             <h4>التفاصيل</h4>
         <div>
@@ -247,9 +248,9 @@ export default function FinalCartComponent() {
         <h4 style={{marginTop:'10%'}}>السلّة</h4>
 
         {TakeAwayOrShippingFunction()}
-        {ShowShippingOrTakeAway()}
+        {/* {ShowShippingOrTakeAway()} */}
 
-        <img onClick={trashFunction} width={'10%'} src={x} alt="" />
+        <img onClick={trashFunction} style={{marginTop:'10%',marginBottom:'10%'}} width={'10%'} src={x} alt="" />
         <div style={{display:trash}}>
         <Trash setTrash={setTrash}/>
         </div>

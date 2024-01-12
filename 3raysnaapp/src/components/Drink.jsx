@@ -2,6 +2,7 @@ import React from 'react'
 import userContext from '../userContext'
 import { useContext,useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 export default function Drink() {
   const{drinkIndex,drinkMenu,cart,setCart} = useContext(userContext)
@@ -30,8 +31,8 @@ export default function Drink() {
 
   return (
     <div>
-        <header style={{paddingTop:'20px',paddingBottom:'20px',marginBottom:'25px'}}>
-            <h1 style={{margin:'0px'}}>عرايسنا ولا ازكى</h1>
+        <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
         <img className='MealImageMealsComponent'  src={drinkMenu[drinkIndex].img} alt="MealImage" />
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{drinkMenu[drinkIndex].meal}</h2>

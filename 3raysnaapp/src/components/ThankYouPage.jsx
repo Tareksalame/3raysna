@@ -7,6 +7,7 @@ import tiktokblack from '../images/tiktokblack.png'
 import instagramblack from '../images/instablack.png'
 import whatsAppblack from '../images/whatsappblack.png'
 import telephoneblack from '../images/telephoneblack.png'
+import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 export default function ThankYouPage() {
     const nav = useNavigate()
@@ -37,8 +38,8 @@ export default function ThankYouPage() {
   return (
     <div className='AnimationPageDiv'>
         {OpenFunction()}
-        <header>
-            <h1>عرايسنا ولا ازكى</h1>
+        <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
         <div className='OpenAnimationDiv'>
             <img id='Fork' src={fork} alt="Fork" />
