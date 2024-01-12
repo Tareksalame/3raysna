@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import userContext from '../userContext'
 
 export default function InformationsPage() {
 
-    const {OrderNumber,setOrderNumber,
-        calculateDistance,distance,takeAwayOrShipping,location,cart,name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,FinalCart,setFinalCart} = useContext(userContext)
+    const {openClose,setOrderNumber,
+        calculateDistance,name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes} = useContext(userContext)
     const nav = useNavigate()
 
     const checkInformations = ()=>
@@ -21,6 +21,10 @@ export default function InformationsPage() {
         else if (name.length < 3)
         {
             alert('الرجاء كتابة اسمك واسم العائلة')
+        }
+        else if(openClose === false)
+        {
+            alert('مسكرين حاليًا بتقدر ترجع بعدين')
         }
         else
         {

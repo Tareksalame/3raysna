@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import userContext from '../userContext';
 import { useContext, useEffect } from 'react';
@@ -19,7 +19,7 @@ export default function OpenClose() {
     // const time = '20:00'
     function isRestaurantOpen(day, time) {
         // Check if the day is Thursday or Friday
-        if (day === 'Thursday' || day === 'Friday' || day === 'Saturday') {
+        if (day === 'Thursday' || day === 'Friday') {
           // Convert the time to a comparable format (e.g., '18:30' becomes 1830)
           const formattedTime = parseInt(time.replace(':', ''), 10);
       

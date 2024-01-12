@@ -35,9 +35,9 @@ export default function EnterPage() {
                     </p>
         </div>
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center',width:'80%',paddingBottom:'20%'}}>
-            <a target='_blank' href="https://wa.me/972546664827"><img width={'50%'} src={whatsAppblack} alt="whatsapp" /></a>
-            <a target='_blank' href="https://www.instagram.com/3rayesna.wla.azka/"><img width={'50%'} src={instagramblack} alt="instagram" /></a>
-            <a target='_blank' href="tel:0546664827"><img width={'50%'} src={telephoneblack} alt="telephone"/></a>
+            <a target='_blank' rel="noreferrer" href="https://wa.me/972546664827"><img width={'50%'} src={whatsAppblack} alt="whatsapp" /></a>
+            <a target='_blank' rel="noreferrer" href="https://www.instagram.com/3rayesna.wla.azka/"><img width={'50%'} src={instagramblack} alt="instagram" /></a>
+            <a target='_blank' rel="noreferrer" href="tel:0546664827"><img width={'50%'} src={telephoneblack} alt="telephone"/></a>
         </div>
             <div className='StartGetDivEnterPageComponent'>
                 <h2 style={{display:open}} id='Start' >ابدا طلبيتك <br /> من هون</h2>
