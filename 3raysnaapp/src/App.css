@@ -817,4 +817,92 @@ header h1
     transform: translateY(0%);
 
 } */
+/* Rating _________________________________________________________________________ */
+.NotesComponent
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kufam', sans-serif;
+}
+.NotesComponent h1
+{
+  font-size: 25px;
+  color:rgb(73, 49, 42);
+}
+.NotesComponent h2
+{
+  font-size: 20px;
+  color: #7d3b00;
+}
+.NotesComponent h3
+{
+  font-size: 15px;
+  color: rgb(73, 49, 42);
+}
+.NotesComponent p
+{
+  font-size: 20px;
+  color: #00677c;
+  font-weight: 700;
+}
+.NotesComponent textarea
+{
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Kufam', sans-serif;
+}
+.NotesComponent button
+{
+  width: 60%;
+  margin-top: 5%;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(221, 195, 87);
+  color: rgb(73, 49, 42);
+  font-size: 25px;
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
 
+}
+.WarGame
+{
+  width: 60%;
+  margin-top: 5%;
+  height: 80px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(221, 195, 87);
+  color: rgb(73, 49, 42);
+  font-size: 25px;
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  padding-top: 3%;
+}
+
+.OrderNumberSpan
+{
+  color:#00677c;
+  font-size: 25px;
+}
+.rating-container {
+  text-align: center;
+}
+
+.rating-stars {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.rating-stars span:hover,
+.rating-stars span.active {
+  color: gold;
+}

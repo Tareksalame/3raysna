@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import fork from '../images/Open/fork.png'
 import pizza from '../images/Open/pizza.png'
@@ -11,12 +11,18 @@ import Logo3raysna from '../images/Open/Logo3raysna.PNG'
 
 export default function ThankYouPage() {
     const nav = useNavigate()
-    const OpenFunction = () =>
+    // const OpenFunction = () =>
+    // {
+    //     setTimeout(() => {
+    //         nav('/EnterPage')
+    //     }, 6000);
+    // }
+    useEffect(()=>
     {
         setTimeout(() => {
             nav('/EnterPage')
         }, 6000);
-    }
+    },[])
 
 
     const observer = new IntersectionObserver((entries)=>{
@@ -37,7 +43,7 @@ export default function ThankYouPage() {
     
   return (
     <div className='AnimationPageDiv'>
-        {OpenFunction()}
+        {/* {OpenFunction()} */}
         <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
@@ -56,10 +62,10 @@ export default function ThankYouPage() {
             {/* <!-- MINIU --> */}
             <h3 id="design">Designed & Developed By - <span>Tarek Ben Jehad</span></h3>
             <div>
-              <a target='_blank' href="https://wa.me/972525272910"><img src={whatsAppblack} alt="" /></a>
-              <a target='_blank' href="https://www.tiktok.com/@tarekbenjehad?is_from_webapp=1&sender_device=pc"><img src={tiktokblack} alt="" /></a>
-              <a target='_blank' href="https://www.instagram.com/tarekbenjehad?igsh=OGQ5ZDc2ODk2ZA%3D%3D"><img src={instagramblack} alt="" /></a>
-              <a target='_blank' href="tel:0525272910"><img src={telephoneblack} alt=""/></a>
+              <a target='_blank' rel="noreferrer" href="https://wa.me/972525272910"><img src={whatsAppblack} alt="" /></a>
+              <a target='_blank' rel="noreferrer" href="https://www.tiktok.com/@tarekbenjehad?is_from_webapp=1&sender_device=pc"><img src={tiktokblack} alt="" /></a>
+              <a target='_blank' rel="noreferrer" href="https://www.instagram.com/tarekbenjehad?igsh=OGQ5ZDc2ODk2ZA%3D%3D"><img src={instagramblack} alt="" /></a>
+              <a target='_blank' rel="noreferrer" href="tel:0525272910"><img src={telephoneblack} alt=""/></a>
             </div>
         </div>
     </div>

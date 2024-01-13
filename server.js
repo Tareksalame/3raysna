@@ -12,6 +12,10 @@ app.use(bp.json());
 db.connect(dbURI);
 const nodemailer = require('nodemailer');
 
+const NotesSchema = db.Schema({
+    selectedRating:Number,
+    Notes:String
+})
 
 const OrderSchema = db.Schema({
     name:String,
@@ -28,7 +32,26 @@ const OrderSchema = db.Schema({
 });
 
 const OrderModel = db.model('Order',OrderSchema);
+const NotesModel = db.model('Notes',NotesSchema);
 
+app.post('/SendRating', async(req,res)=>
+{
+    let selectedRating = req.body.selectedRating
+    let Notes = req.body.Notes
+
+    const temp = await NotesModel.insertMany({
+        selectedRating : selectedRating ,
+        Notes : Notes
+    })
+    if(temp !== null)
+    {
+        res.json("Done")
+    }
+    else
+    {
+        res.json('Error')
+    }
+})
 
 app.post('/BuyNow',async(req,res)=>
 {

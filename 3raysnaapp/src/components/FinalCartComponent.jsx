@@ -185,7 +185,7 @@ export default function FinalCartComponent() {
             {
               if(data === 'done')
               {
-                alert('\nطلبيّتك وصلتنا' + '\nرقم طلبيتك' + OrderNumber + '\n خذ سكرين شوت' + '\nالدفع نقدي عند الاستلام')
+                alert('\nطلبيّتك وصلتنا' + ' \nرقم طلبيتك' + OrderNumber + '\n خذ سكرين شوت' + '\nالدفع نقدي عند الاستلام')
                 setName('')
                 setPhoneNumber('')
                 setCity('')
@@ -195,7 +195,7 @@ export default function FinalCartComponent() {
                 setLocation(null)
                 setCart([])
                 SetFinalPrice(0)
-                nav('/EnterPage')
+                nav('/Notes')
                 // setTimeout(() =>nav("/"), 1500)
               }
               else

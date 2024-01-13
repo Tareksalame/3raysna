@@ -10,6 +10,7 @@ import Drink from './components/Drink';
 import InformationsPage from './components/InformationsPage';
 import FinalCartComponent from './components/FinalCartComponent';
 import ThankYouPage from './components/ThankYouPage';
+import Notes from './components/Notes';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <UsersProvider>
         <BrowserRouter>
         <Routes>
+          <Route path='/' element={<ThankYouPage/>}/>
           <Route path='/EnterPage' element={<EnterPage/>}/>
           <Route path='/Choose' element={<TakeAwayOrIn/>}/>
           <Route path='/Menu' element={<Menu/>}/>
@@ -30,7 +32,8 @@ function App() {
           <Route path='/Meal' element={<Meal/>}/>
           <Route path='/Cart' element={<FinalCartComponent/>}/>
           <Route path='/Drink' element={<Drink/>}/>
-          <Route path='/' element={<ThankYouPage/>}/>
+          <Route path='/Notes' element={<Notes/>}/>
+
 
         </Routes>
         </BrowserRouter>

@@ -29,6 +29,7 @@ export const UsersProvider = ({children})=>
     const [Email,setEmail] = useState('')
     const [Notes,setNotes] = useState('')
 
+    const [selectedRating, setSelectedRating] = useState(0);
 
 
     const mealsMenu = [
@@ -98,7 +99,7 @@ const calculateDistance = () => {
 
 
     return (
-    <userContext.Provider value={{OrderNumber,setOrderNumber,
+    <userContext.Provider value={{selectedRating, setSelectedRating,OrderNumber,setOrderNumber,
         FinalPrice,SetFinalPrice,calculateDistance,FinalCart,setFinalCart,
     name,setName,PhoneNumber,setPhoneNumber,City,setCity,Email,setEmail,Notes,setNotes,
     additionsMenu,cartArr,cart,setCart,drinkIndex,setDrinkIndex,mealIndex,setMealIndex,mealsMenu,drinkMenu,distance,
