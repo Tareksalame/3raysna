@@ -65,7 +65,7 @@ export default function Notes() {
         <textarea value={Notes} onChange={(e)=>{setNotes(e.target.value)}} name="textarea" id="textarea" cols="30" rows="6"></textarea>
 
         <button onClick={SendRating}>إِرسال التقييم</button>
-        <a  className='WarGame' target='_blank' rel="noreferrer" href="https://tareksalame.github.io/War/">♠️♦️♣️❤️ <br /> إِلعب حرب ضرب</a>
+        <a  className='WarGame' target='_blank' rel="noreferrer" href="https://wargame.onrender.com">♠️♦️♣️❤️ <br /> إِلعب حرب ضرب</a>
         <button onClick={NewOrder}>طلبية جديدة</button>
 
 
