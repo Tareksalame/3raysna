@@ -27,8 +27,6 @@ export default function EnterPage() {
             <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
             <OpenClose/>
-            <input type="file" capture="user" />
-            <input type="file" capture="environment" />
 
         <div className='ParagraphEnterPageComponent'>
         <p>
