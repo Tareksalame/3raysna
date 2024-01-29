@@ -27,12 +27,16 @@ export default function EnterPage() {
             <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
             <OpenClose/>
+            <input type="file" capture="user" />
+            <input type="file" capture="environment" />
+
         <div className='ParagraphEnterPageComponent'>
-                    <p>بَسطة عَرايس🌮<br />
-                       لجٰميع مُناسباتكم<br />
-                        حَفلات خاصة، بوفيهات، عَقائق، جبلات حِناء<br />
-                     متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30 - 23:00                    
-                    </p>
+        <p>
+                      بَسطة عَرايس🌮 <br />
+                    لجٰميع مُناسباتكم <br />
+        حَفلات خاصة، بوفيهات، عَقائق، جبلات حِناء <br />
+        متواجدين اخر الاسبوع خميس/جمعة من الساعة 18:30 - 23:00                    
+        </p>
         </div>
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center',width:'80%',paddingBottom:'20%'}}>
             <a target='_blank' rel="noreferrer" href="https://wa.me/972546664827"><img width={'50%'} src={whatsAppblack} alt="whatsapp" /></a>

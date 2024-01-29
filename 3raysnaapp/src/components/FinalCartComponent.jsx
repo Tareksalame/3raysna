@@ -16,6 +16,30 @@ export default function FinalCartComponent() {
         FinalPrice,SetFinalPrice} = useContext(userContext)
         const nav = useNavigate()
         const [trash,setTrash] = useState('none')
+
+
+        const ShippingPriceInput =()=>
+        {
+            if(City === 'جت')
+                {
+                    return <input disabled value='15 ₪' type="text" />
+                }
+                else if (City === 'باقة')
+                {
+                    return <input disabled value='10 ₪' type="text" />
+
+                }
+                else if (City === 'زيمر')
+                {
+                    return <input disabled value='25 ₪' type="text" />
+
+                }
+                else if (City === 'ميسر')
+                {
+                    return <input disabled value='20 ₪' type="text" />
+
+                }
+        }
         const TakeAwayOrShippingFunction = ()=>
         {
             if(takeAwayOrShipping === 'shipping')
@@ -29,7 +53,8 @@ export default function FinalCartComponent() {
                     </div>
                     <div>
                         <h3>تكلفة التوصيل</h3>
-                        <input disabled value='15 ₪' type="text" />
+                        {ShippingPriceInput()}
+                        {/* <input disabled value='15 ₪' type="text" /> */}
                     </div>
                 </div>
             }
@@ -131,7 +156,22 @@ export default function FinalCartComponent() {
                 {
                     return val.price*val.count
                 })
-                Total.push(15)
+                if(City === 'جت')
+                {
+                    Total.push(15)
+                }
+                else if (City === 'باقة')
+                {
+                    Total.push(10)
+                }
+                else if (City === 'زيمر')
+                {
+                    Total.push(25)
+                }
+                else if (City === 'ميسر')
+                {
+                    Total.push(20)
+                }
                 SetFinalPrice(Total.reduce((accumulator, currentValue) => {
                     return accumulator + currentValue;
                 }, 0))
@@ -156,7 +196,27 @@ export default function FinalCartComponent() {
 
         const BuyNowFunction = ()=>
         {
-            if(FinalPrice < 30 || FinalPrice === null)
+            if(FinalPrice === null)
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else if(FinalPrice-10 < 15 && City === 'باقة' && takeAwayOrShipping === 'shipping')
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else if(FinalPrice-15 < 15 && City === 'جت' && takeAwayOrShipping === 'shipping')
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else if(FinalPrice-25 < 15 && City === 'زيمر' && takeAwayOrShipping === 'shipping')
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else if(FinalPrice-20 < 15 && City === 'ميسر' && takeAwayOrShipping === 'shipping')
+            {
+                alert('الحد الادنى للطلبية هو ₪15')
+            }
+            else if(FinalPrice < 15 && takeAwayOrShipping === 'Take Away')
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
