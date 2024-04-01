@@ -6,7 +6,7 @@ import userContext from '../userContext'
 
 
 export default function Additions(props) {
-  const[counter,setCounter] = useState(x)
+  const[counter,setCounter] = useState(check)
   const {cart} = useContext(userContext)
 
   const Yes = ()=>
@@ -22,7 +22,7 @@ export default function Additions(props) {
 
   useEffect(()=>
   {
-    setCounter(x)
+    setCounter(check)
   },[cart])
 
   return (

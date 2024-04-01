@@ -281,6 +281,7 @@ header h1
 .MealShowMenu
 {
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 1fr 1fr;
 }
@@ -301,14 +302,24 @@ header h1
   border: 3px solid rgb(221, 195, 87);
   border-top: 0px;
   width: 80%;
+  font-size: 15px;
 }
 .MealImageMealsComponent
 {
   width: 80%;
+  height: 160px;
   border: 3px solid rgb(221, 195, 87);
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  background-color: white;
+}
+.mealImage
+{
+  width: 80%;
+  border: 3px solid rgb(221, 195, 87);
+  border-radius: 10px;
+  background-color: white;
 
 }
 /* ____________________________________Meal&DrinkCountersDiv_____________________________________ */

@@ -26,6 +26,8 @@ export default function Drink() {
             ])
             alert('تمت الاضافة الى السلة')
             setCounter(0)
+            nav('/Menu')
+
     }
     }
 
@@ -34,7 +36,7 @@ export default function Drink() {
         <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
-        <img className='MealImageMealsComponent'  src={drinkMenu[drinkIndex].img} alt="MealImage" />
+        <img className='mealImage'  src={drinkMenu[drinkIndex].img} alt="MealImage" />
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{drinkMenu[drinkIndex].meal}</h2>
         <h2 style={{backgroundColor:'#00677c',color:'white'}}>{drinkMenu[drinkIndex].price} ₪</h2>
         <div className='MealDrinkCountersDiv'>

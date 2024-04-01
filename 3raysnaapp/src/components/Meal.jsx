@@ -28,6 +28,7 @@ export default function Meal() {
             ])
             alert('تمت الاضافة الى السلة')
             setCounter(0)
+            nav('/Menu')
         }
     }
   
@@ -59,7 +60,7 @@ export default function Meal() {
 <header style={{backgroundColor:'transparent', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <img width={'70%'} src={Logo3raysna} alt="Logo" />
         </header>
-        <img className='MealImageMealsComponent'  src={mealsMenu[mealIndex].img} alt="MealImage" />
+        <img className='mealImage'  src={mealsMenu[mealIndex].img} alt="MealImage" />
         <h2 style={{backgroundColor:'#7d3b00',color:'white'}}>{mealsMenu[mealIndex].meal}</h2>
         <h2 style={{backgroundColor:'#00677c',color:'white'}}>{mealsMenu[mealIndex].price} ₪</h2>
         <div className='MealDrinkCountersDiv'>

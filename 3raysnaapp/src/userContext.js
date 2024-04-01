@@ -3,10 +3,16 @@ import خبز from './images/menu/5obz.jpg'
 import مكس from './images/menu/mix.jpg'
 import مقطع from './images/menu/mkt3.jpg'
 import رول from './images/menu/roll.jpg'
-import water from './images/menu/water.jpg'
-import zero from './images/menu/zero.png'
-import cola from './images/menu/cola.jpeg'
-import fanta from './images/menu/fanta.jpeg'
+import تشبس from './images/menu/frenchfries.jpg'
+import water from './images/Drinks/water.png'
+import zero from './images/Drinks/zero.jpeg'
+import cola from './images/Drinks/cocacola.jpeg'
+import fanta from './images/Drinks/fanta.png'
+import sprite from './images/Drinks/sprite.webp'
+import xl from './images/Drinks/xl.webp'
+import xl10 from './images/Drinks/xl10.png'
+
+
 import check from './images/menu/checked.png'
 import x from './images/menu/No.png'
 
@@ -33,24 +39,35 @@ export const UsersProvider = ({children})=>
 
 
     const mealsMenu = [
-        {meal : 'رول عرايس سيخ واحد' , price: 15 , img:رول},
         {meal : 'رول عرايس سيخين' , price: 25    , img:رول},
         {meal : 'خبزة عرايس' , price: 15    , img:خبز},
         {meal : 'مكس عرايس' , price: 35     , img:مكس},
         {meal : 'بوكس خبز مقطع' , price: 20 , img:مقطع},
     ]
+    const fries = [
+      {meal : 'تشبس' , price: 10 , img:تشبس},
+      {meal : 'بوتيتو' , price: 10 , img:تشبس},
+      {meal : 'حلقات البصل' , price: 10 , img:تشبس},
+      {meal : 'ميكس' , price: 10 , img:تشبس},
+    ]
+
     const drinkMenu = [
-        {meal : "فانتا" , price: 3     , img:fanta},
-        {meal : "ماء" , price: 3       , img:water},
-        {meal : "كولا زيرو" , price: 3 , img:zero },
-        {meal : "كوكا كولا" , price: 3 , img:cola },
+        {meal : "فانتا" , price: 7     , img:fanta},
+        {meal : "ماء" , price: 5       , img:water},
+        {meal : "كولا زيرو" , price: 7 , img:zero },
+        {meal : "كوكا كولا" , price: 7 , img:cola },
+        {meal : "سبرايت" , price: 7 , img:sprite },
+        {meal : "اكس ال 10" , price: 7 , img:xl10 },
+        {meal : "اكس ال" , price: 7 , img:xl },
+
+
     ]
     const additionsMenu = [
-        {add : '🥒خيار مخلل '    ,YesNo: x},
-        {add : '🧅بصل مع بقدونس' ,YesNo: x},
-        {add : '🍅بندورة'        ,YesNo: x},
-        {add : '🍈ملفوف'         ,YesNo: x},
-        {add : '🌶️فليفلة'        ,YesNo: x}
+        {add : '🥒خيار مخلل '    ,YesNo: check},
+        {add : '🧅بصل مع بقدونس' ,YesNo: check},
+        {add : '🍅بندورة'        ,YesNo: check},
+        {add : '🍈ملفوف'         ,YesNo: check},
+        {add : '🌶️فليفلة'        ,YesNo: check}
     ]
 
   const [location, setLocation] = useState(null);

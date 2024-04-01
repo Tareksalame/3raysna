@@ -22,21 +22,21 @@ export default function FinalCartComponent() {
         {
             if(City === 'جت')
                 {
-                    return <input disabled value='15 ₪' type="text" />
+                    return <input disabled value='25 ₪' type="text" />
                 }
                 else if (City === 'باقة')
                 {
-                    return <input disabled value='10 ₪' type="text" />
+                    return <input disabled value='15 ₪' type="text" />
 
                 }
                 else if (City === 'زيمر')
                 {
-                    return <input disabled value='25 ₪' type="text" />
+                    return <input disabled value='35 ₪' type="text" />
 
                 }
                 else if (City === 'ميسر')
                 {
-                    return <input disabled value='20 ₪' type="text" />
+                    return <input disabled value='30 ₪' type="text" />
 
                 }
         }
@@ -158,19 +158,19 @@ export default function FinalCartComponent() {
                 })
                 if(City === 'جت')
                 {
-                    Total.push(15)
+                    Total.push(25)
                 }
                 else if (City === 'باقة')
                 {
-                    Total.push(10)
+                    Total.push(15)
                 }
                 else if (City === 'زيمر')
                 {
-                    Total.push(25)
+                    Total.push(35)
                 }
                 else if (City === 'ميسر')
                 {
-                    Total.push(20)
+                    Total.push(30)
                 }
                 SetFinalPrice(Total.reduce((accumulator, currentValue) => {
                     return accumulator + currentValue;
@@ -200,19 +200,19 @@ export default function FinalCartComponent() {
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
-            else if(FinalPrice-10 < 15 && City === 'باقة' && takeAwayOrShipping === 'shipping')
+            else if(FinalPrice-15 < 15 && City === 'باقة' && takeAwayOrShipping === 'shipping')
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
-            else if(FinalPrice-15 < 15 && City === 'جت' && takeAwayOrShipping === 'shipping')
+            else if(FinalPrice-25 < 15 && City === 'جت' && takeAwayOrShipping === 'shipping')
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
-            else if(FinalPrice-25 < 15 && City === 'زيمر' && takeAwayOrShipping === 'shipping')
+            else if(FinalPrice-35 < 15 && City === 'زيمر' && takeAwayOrShipping === 'shipping')
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }
-            else if(FinalPrice-20 < 15 && City === 'ميسر' && takeAwayOrShipping === 'shipping')
+            else if(FinalPrice-30 < 15 && City === 'ميسر' && takeAwayOrShipping === 'shipping')
             {
                 alert('الحد الادنى للطلبية هو ₪15')
             }

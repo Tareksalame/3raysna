@@ -60,7 +60,7 @@ export default function Menu() {
                     {mealsShow()}
                 </div>
         <h1 className='SpecialMenuMenuComponent'>
-            Mini Drinks
+            Drinks
         </h1>
                 <div className='MealShowMenu'>
                     {drinksShow()}
